@@ -1,0 +1,6 @@
+/ros2_imu_node:
+  ros__parameters:
+    # 话题名称
+    topic: "moveit2"
+    # frame_id
+    imu_frame_id: "moveit2_link"
