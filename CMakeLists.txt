@@ -21,10 +21,13 @@ find_package(rclcpp REQUIRED)
 
 include_directories(
     include
+    src
+    src/driver
 )
 
 file(GLOB main_srcs 
     src/*.cpp
+    src/driver/*.cpp
 )
 
 add_executable(${PROJECT_NAME}_node ${main_srcs})
