@@ -24,7 +24,7 @@ void MoveIt2::Init()
         servo_pwm.channel = i;
         servo_pwm.polarity = true;
         servo_pwm.period = 20000000;
-        servo_pwm.dutycycle = 20000000 - 1500000;
+        servo_pwm.dutycycle = 1000000;
         std::shared_ptr<Pwm> pwm = std::make_shared<Pwm>(servo_pwm); // pwm1 20ms周期
         pwm_vec_.push_back(pwm);
     }
@@ -32,7 +32,7 @@ void MoveIt2::Init()
 
 int MoveIt2::SetServo(uint32_t chanel, float angle)
 {
-    int32_t duty_cycle = 20000000 - (1500000 - (angle * 2000000 / M_PI));
+    int32_t duty_cycle = 1500000 - (angle * 2000000 / M_PI);
     if (pwm_vec_[chanel]) {
         pwm_vec_[chanel]->PwmDutyCycle(duty_cycle);
     }
