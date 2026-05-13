@@ -4,7 +4,7 @@
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<rclcpp::Node>("imu901m");
+    auto node = std::make_shared<rclcpp::Node>("moveit2_node");
     std::unique_ptr<MoveIt2> moveit2(new MoveIt2(node));
     moveit2->Init();
     rclcpp::spin(node);

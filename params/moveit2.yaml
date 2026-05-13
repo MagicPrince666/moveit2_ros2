@@ -1,6 +1,10 @@
-/ros2_imu_node:
+/moveit2_node:
   ros__parameters:
     # 话题名称
     topic: "moveit2"
     # frame_id
     imu_frame_id: "moveit2_link"
+    # 使能脚
+    pca_oe:
+        chip: ""
+        line: 0
