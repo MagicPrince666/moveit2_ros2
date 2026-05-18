@@ -8,3 +8,22 @@
     pca_oe:
         chip: ""
         line: 0
+    remote:
+      # 遥控类型 sbus/gamepad/keyboard/socket/sonnyps2
+      type: "gamepad"
+      # 端口
+      port: "/dev/input/js0"
+      # 波特率
+      baudrate: 100000
+      # 1帧数据长度
+      data_len: 25
+      # 最大量程
+      joy_var_max: 1800
+      # 最小量程
+      joy_var_min: 199
+      # 线速度最大值 单位m/s
+      max_x_vel: 0.4
+      # 角速度最大值 单位rad/s
+      max_w_vel: 5.0
+      # 最大转向角
+      max_angle: 0.758

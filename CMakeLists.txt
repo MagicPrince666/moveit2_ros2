@@ -23,11 +23,13 @@ include_directories(
     include
     src
     src/driver
+    src/remote
 )
 
 file(GLOB main_srcs 
     src/*.cpp
     src/driver/*.cpp
+    src/remote/*.cpp
 )
 
 add_executable(${PROJECT_NAME}_node ${main_srcs})
